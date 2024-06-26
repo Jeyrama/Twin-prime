@@ -39,3 +39,5 @@ function isPrime(n) {
   for (let p=5; p*p<=n; p+=6) if (n%p==0 || n%(p+2)==0) return false;
   return true;
 }
+
+// or
