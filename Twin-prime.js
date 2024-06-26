@@ -22,3 +22,6 @@ Examples:
   953 + 2 = 955, which is not prime 
   hence, 953 is not a Twin Prime
 */
+
+
+// Solution
