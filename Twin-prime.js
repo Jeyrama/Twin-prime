@@ -25,3 +25,17 @@ Examples:
 
 
 // Solution
+
+function isTwinPrime(n) {
+  if (n%2 == 0) return false;
+  if (n==3 || n==5) return true;
+  if (((n-1)/6)%1!=0 && ((n+1)/6)%1!=0) return false;
+  if (2*(n+1)%12!=0 && 2*(n-1)%12!=0) return false;
+  return isPrime(n) && (isPrime(n+2) || isPrime(n-2));
+}
+
+function isPrime(n) {
+  if (n<2 || n%2==0 || n%3==0) return n==2 || n==3;
+  for (let p=5; p*p<=n; p+=6) if (n%p==0 || n%(p+2)==0) return false;
+  return true;
+}
